@@ -21,6 +21,7 @@
 		37570D5018595B61005F4BB5 /* NativeBedsideClockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37570D4F18595B61005F4BB5 /* NativeBedsideClockTests.m */; };
 		37570D5A18595CD1005F4BB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37570D5918595CD1005F4BB5 /* Main.storyboard */; };
 		37570D5D185963F8005F4BB5 /* DKAClockUiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37570D5C185963F8005F4BB5 /* DKAClockUiViewController.m */; };
+		37570D60185A983F005F4BB5 /* DKAFontTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37570D5F185A983F005F4BB5 /* DKAFontTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		37570D5918595CD1005F4BB5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		37570D5B185963F8005F4BB5 /* DKAClockUiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKAClockUiViewController.h; sourceTree = "<group>"; };
 		37570D5C185963F8005F4BB5 /* DKAClockUiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKAClockUiViewController.m; sourceTree = "<group>"; };
+		37570D5E185A983F005F4BB5 /* DKAFontTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKAFontTableViewController.h; sourceTree = "<group>"; };
+		37570D5F185A983F005F4BB5 /* DKAFontTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKAFontTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 				37570D3C18595B61005F4BB5 /* Images.xcassets */,
 				37570D3118595B61005F4BB5 /* Supporting Files */,
 				37570D5918595CD1005F4BB5 /* Main.storyboard */,
+				37570D5E185A983F005F4BB5 /* DKAFontTableViewController.h */,
+				37570D5F185A983F005F4BB5 /* DKAFontTableViewController.m */,
 				37570D5B185963F8005F4BB5 /* DKAClockUiViewController.h */,
 				37570D5C185963F8005F4BB5 /* DKAClockUiViewController.m */,
 			);
@@ -249,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37570D3718595B61005F4BB5 /* main.m in Sources */,
+				37570D60185A983F005F4BB5 /* DKAFontTableViewController.m in Sources */,
 				37570D5D185963F8005F4BB5 /* DKAClockUiViewController.m in Sources */,
 				37570D3B18595B61005F4BB5 /* DKAAppDelegate.m in Sources */,
 			);
