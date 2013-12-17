@@ -66,6 +66,7 @@ NSMutableArray *fontNameArray;
     
     // Configure the cell...
     cell.textLabel.text = [fontNameArray objectAtIndex:indexPath.row];
+    cell.textLabel.font = [UIFont fontWithName:cell.textLabel.text size:12.0f];
     
     return cell;
 }
@@ -128,7 +129,7 @@ NSMutableArray *fontNameArray;
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a story board-based application, you will often want to do a little preparation before navigation
@@ -136,8 +137,12 @@ NSMutableArray *fontNameArray;
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    NSInteger index = [[self.tableView indexPathForSelectedRow] row];
+    
+    self.selectedFont = [[NSString alloc] init];
+    self.selectedFont = [fontNameArray objectAtIndex:index];
 }
 
- */
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "DKAClockUiViewController.h"
+#import "DKAFontTableViewController.h"
 
 @interface DKAClockUiViewController ()
 
@@ -28,6 +29,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    [self.timeLabel setCenter:self.view.center];
+    
     [self updateTime];
 }
 
@@ -40,7 +43,7 @@
 -(void)updateTime
 {
     NSDateFormatter *date_format = [[NSDateFormatter alloc] init];
-    [date_format setDateFormat:@"hh:mm:ss"];
+    [date_format setDateFormat:@"hh:mm:ss a"];
     self.timeLabel.text = [date_format stringFromDate:[NSDate date]];
     
     // repeat every second
@@ -48,4 +51,19 @@
     
 }
 
+- (IBAction)unwindToClock:(UIStoryboardSegue *)segue
+{
+    DKAFontTableViewController* source = [segue sourceViewController];
+    self.timeLabel.font = [UIFont fontWithName:source.selectedFont size:24.0f];
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+{
+    return YES;
+}
+
+-(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    [self.timeLabel setCenter:self.view.center];
+}
 @end

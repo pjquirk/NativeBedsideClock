@@ -10,4 +10,6 @@
 
 @interface DKAFontTableViewController : UITableViewController
 
+@property NSString* selectedFont;
+
 @end
