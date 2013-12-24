@@ -87,6 +87,8 @@ NSMutableArray *fontNameArray;
             [fontNameArray addObject:([fontNames objectAtIndex:indFont])];
         }
     }
+    
+    [fontNameArray sortUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
 
 }
 

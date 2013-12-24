@@ -54,7 +54,7 @@
 - (IBAction)unwindToClock:(UIStoryboardSegue *)segue
 {
     DKAFontTableViewController* source = [segue sourceViewController];
-    self.timeLabel.font = [UIFont fontWithName:source.selectedFont size:24.0f];
+    self.timeLabel.font = [UIFont fontWithName:source.selectedFont size:self.timeLabel.font.pointSize];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
