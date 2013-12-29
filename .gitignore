@@ -1,2 +1,8 @@
 
 *.xcbkptlist
+
+# AppCode recommended ignores:
+# see: http://stackoverflow.com/questions/11968531/what-to-gitignore-from-the-idea-folder
+*.iws
+*/.idea/workspace.xml
+*/.idea/tasks.xml
