@@ -22,6 +22,7 @@
 		37570D5A18595CD1005F4BB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37570D5918595CD1005F4BB5 /* Main.storyboard */; };
 		37570D5D185963F8005F4BB5 /* DKAClockUiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37570D5C185963F8005F4BB5 /* DKAClockUiViewController.m */; };
 		37570D60185A983F005F4BB5 /* DKAFontTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37570D5F185A983F005F4BB5 /* DKAFontTableViewController.m */; };
+		37B96049186FC957001C69A2 /* DKAPrefencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B96048186FC957001C69A2 /* DKAPrefencesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		37570D5C185963F8005F4BB5 /* DKAClockUiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKAClockUiViewController.m; sourceTree = "<group>"; };
 		37570D5E185A983F005F4BB5 /* DKAFontTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKAFontTableViewController.h; sourceTree = "<group>"; };
 		37570D5F185A983F005F4BB5 /* DKAFontTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKAFontTableViewController.m; sourceTree = "<group>"; };
+		37B96047186FC957001C69A2 /* DKAPrefencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKAPrefencesViewController.h; path = ../DKAPrefencesViewController.h; sourceTree = "<group>"; };
+		37B96048186FC957001C69A2 /* DKAPrefencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKAPrefencesViewController.m; path = ../DKAPrefencesViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,13 +120,15 @@
 			children = (
 				37570D3918595B61005F4BB5 /* DKAAppDelegate.h */,
 				37570D3A18595B61005F4BB5 /* DKAAppDelegate.m */,
-				37570D3C18595B61005F4BB5 /* Images.xcassets */,
-				37570D3118595B61005F4BB5 /* Supporting Files */,
-				37570D5918595CD1005F4BB5 /* Main.storyboard */,
-				37570D5E185A983F005F4BB5 /* DKAFontTableViewController.h */,
-				37570D5F185A983F005F4BB5 /* DKAFontTableViewController.m */,
 				37570D5B185963F8005F4BB5 /* DKAClockUiViewController.h */,
 				37570D5C185963F8005F4BB5 /* DKAClockUiViewController.m */,
+				37570D5E185A983F005F4BB5 /* DKAFontTableViewController.h */,
+				37570D5F185A983F005F4BB5 /* DKAFontTableViewController.m */,
+				37B96047186FC957001C69A2 /* DKAPrefencesViewController.h */,
+				37B96048186FC957001C69A2 /* DKAPrefencesViewController.m */,
+				37570D3C18595B61005F4BB5 /* Images.xcassets */,
+				37570D5918595CD1005F4BB5 /* Main.storyboard */,
+				37570D3118595B61005F4BB5 /* Supporting Files */,
 			);
 			path = NativeBedsideClock;
 			sourceTree = "<group>";
@@ -253,6 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37B96049186FC957001C69A2 /* DKAPrefencesViewController.m in Sources */,
 				37570D3718595B61005F4BB5 /* main.m in Sources */,
 				37570D60185A983F005F4BB5 /* DKAFontTableViewController.m in Sources */,
 				37570D5D185963F8005F4BB5 /* DKAClockUiViewController.m in Sources */,
@@ -457,6 +463,7 @@
 				37570D5518595B61005F4BB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		37570D5618595B61005F4BB5 /* Build configuration list for PBXNativeTarget "NativeBedsideClockTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +472,7 @@
 				37570D5818595B61005F4BB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

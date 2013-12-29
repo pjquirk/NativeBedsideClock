@@ -11,4 +11,14 @@
 @interface DKAClockUiViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 
+@property NSDateFormatter *dateFormatter;
+
+@property  NSString* fontColorString;
+
+@property  NSString* fontNameString;
+
+@property bool showTwentyFourHour;
+
+@property bool showSeconds;
+
 @end

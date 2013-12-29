@@ -7,7 +7,7 @@
 //
 
 #import "DKAClockUiViewController.h"
-#import "DKAFontTableViewController.h"
+#import "DKAPrefencesViewController.h"
 
 @interface DKAClockUiViewController ()
 
@@ -29,7 +29,12 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    [self.timeLabel setCenter:self.view.center];
+    self.dateFormatter = [[NSDateFormatter alloc] init];
+    [self.dateFormatter setDateFormat:@"hh:mm:ss a"];
+    
+    self.showSeconds = true;
+    self.showTwentyFourHour = false;
+    self.fontNameString = self.timeLabel.font.fontName;
     
     [self updateTime];
 }
@@ -42,9 +47,7 @@
 
 -(void)updateTime
 {
-    NSDateFormatter *date_format = [[NSDateFormatter alloc] init];
-    [date_format setDateFormat:@"hh:mm:ss a"];
-    self.timeLabel.text = [date_format stringFromDate:[NSDate date]];
+    self.timeLabel.text = [self.dateFormatter stringFromDate:[NSDate date]];
     
     // repeat every second
     [self performSelector:@selector(updateTime) withObject:self afterDelay:1.0];
@@ -53,8 +56,44 @@
 
 - (IBAction)unwindToClock:(UIStoryboardSegue *)segue
 {
-    DKAFontTableViewController* source = [segue sourceViewController];
-    self.timeLabel.font = [UIFont fontWithName:source.selectedFont size:self.timeLabel.font.pointSize];
+    self.timeLabel.font = [UIFont fontWithName:self.fontNameString size:self.timeLabel.font.pointSize];
+    
+    if (self.showTwentyFourHour)
+    {
+        if (self.showSeconds)
+        {
+            [self.dateFormatter setDateFormat:@"HH:mm:ss"];
+        }
+        else
+        {
+            [self.dateFormatter setDateFormat:@"HH:mm"];
+        }
+    }
+    else
+    {
+        if (self.showSeconds)
+        {
+            [self.dateFormatter setDateFormat:@"hh:mm:ss a"];
+        }
+        else
+        {
+            [self.dateFormatter setDateFormat:@"hh:mm a"];
+        }
+    }
+    
+    [self updateTime];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"clockToPreferences"])
+    {
+        DKAPrefencesViewController* dest = [segue destinationViewController];
+        
+        dest.fontNameString = self.fontNameString;
+        dest.showTwentyFourHour = self.showTwentyFourHour;
+        dest.showSeconds = self.showSeconds;
+    }
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
